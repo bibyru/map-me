@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bii86p24pdo23"]
+
+[ext_resource type="Texture2D" uid="uid://cpwphfe4benoe" path="res://Sauce/Sprites/Map-All.png" id="1_yysrv"]
+[ext_resource type="PackedScene" uid="uid://bk72d3xvc2jmq" path="res://Scenes/title.tscn" id="2_qt64s"]
+
+[node name="World" type="Node2D"]
+
+[node name="CanvasBg" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasBg"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasBg/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8, 0.976471, 1, 1)
+
+[node name="Map" type="Sprite2D" parent="CanvasBg/Control"]
+texture_filter = 1
+position = Vector2(576, 474)
+scale = Vector2(4.25, 4.25)
+texture = ExtResource("1_yysrv")
+
+[node name="Title" parent="." instance=ExtResource("2_qt64s")]

@@ -1,0 +1,77 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://4238oj53p822"]
+
+[ext_resource type="FontFile" uid="uid://207qe5tesuhk" path="res://Sauce/Theme/gomarice_round_pop.ttf" id="1_17pix"]
+[ext_resource type="Texture2D" uid="uid://cxr4f2ybvll0n" path="res://Sauce/Theme/checkbutton-on.png" id="1_r8vbg"]
+[ext_resource type="Texture2D" uid="uid://vwpdqyvsmms6" path="res://Sauce/Theme/checkbutton-off.png" id="2_lacd4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51mhk"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gytn1"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
+bg_color = Color(0.67451, 0.67451, 0.67451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn2dh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxru1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+default_font = ExtResource("1_17pix")
+default_font_size = 20
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_51mhk")
+Button/styles/hover = SubResource("StyleBoxFlat_gytn1")
+Button/styles/normal = SubResource("StyleBoxFlat_51mhk")
+Button/styles/pressed = SubResource("StyleBoxFlat_51mhk")
+CheckButton/colors/font_color = Color(0, 0, 0, 1)
+CheckButton/colors/font_focus_color = Color(0, 0, 0, 1)
+CheckButton/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+CheckButton/colors/font_pressed_color = Color(0, 0, 0, 1)
+CheckButton/icons/checked = ExtResource("1_r8vbg")
+CheckButton/icons/unchecked = ExtResource("2_lacd4")
+CheckButton/styles/focus = SubResource("StyleBoxFlat_pn2dh")
+CheckButton/styles/hover = SubResource("StyleBoxFlat_pn2dh")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxFlat_pn2dh")
+CheckButton/styles/normal = SubResource("StyleBoxFlat_pn2dh")
+CheckButton/styles/pressed = SubResource("StyleBoxFlat_pn2dh")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_uxru1")

@@ -1,0 +1,144 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwont0t4texl1"]
+
+[ext_resource type="Script" path="res://Scripts/options.gd" id="1_i0jtu"]
+[ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_l7pe8"]
+
+[node name="Options" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_i0jtu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7pe8")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 325
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 325
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Options" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -51.0
+offset_top = 34.0
+offset_right = 52.0
+offset_bottom = 63.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "Options"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 126.0
+offset_top = 95.0
+offset_right = -126.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Fullscreen" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen"]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen"]
+layout_mode = 2
+
+[node name="Master" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Master"]
+layout_mode = 2
+text = "Master Volume"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Master"]
+layout_mode = 2
+step = 5.0
+value = 25.0
+
+[node name="Sound" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Sound"]
+layout_mode = 2
+text = "Sound Volume"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Sound"]
+layout_mode = 2
+step = 5.0
+value = 100.0
+
+[node name="Music" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Music"]
+layout_mode = 2
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Music"]
+layout_mode = 2
+step = 5.0
+value = 100.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = -72.0
+offset_right = 164.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Close" type="Button" parent="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Quit" type="Button" parent="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Quit" to="." method="_on_quit_pressed"]
