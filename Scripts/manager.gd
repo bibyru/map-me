@@ -1,5 +1,8 @@
 extends Node2D
 
+const px720 = Vector2(1280, 720)
+const px1080 = Vector2(1920, 1080)
+
 var LoadedOpt = preload("res://Scenes/options.tscn")
 var MenuOpt
 
@@ -8,6 +11,8 @@ func _ready():
 	add_child(MenuOpt)
 	
 	MenuOpt.IHide()
+	
+	DisplayServer.window_set_size(px720)
 
 func _unhandled_key_input(event):
 	if event.is_action_pressed("Esc"):

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwont0t4texl1"]
+[gd_scene load_steps=4 format=3 uid="uid://cwont0t4texl1"]
 
 [ext_resource type="Script" path="res://Scripts/options.gd" id="1_i0jtu"]
 [ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_l7pe8"]
+[ext_resource type="PackedScene" uid="uid://c4rmp84rxn8fy" path="res://Prefabs/checkbutton.tscn" id="3_481o8"]
 
 [node name="Options" type="Node2D"]
 process_mode = 3
@@ -53,14 +54,15 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 126.0
-offset_top = 95.0
+offset_top = 102.0
 offset_right = -126.0
-offset_bottom = -101.0
+offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 25
 
 [node name="Fullscreen" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+layout_direction = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen"]
@@ -71,7 +73,22 @@ text = "Fullscreen"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen"]
+[node name="FullCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen" instance=ExtResource("3_481o8")]
+layout_mode = 2
+
+[node name="Borderless" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless"]
+layout_mode = 2
+text = "Borderless"
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BorderCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless" instance=ExtResource("3_481o8")]
 layout_mode = 2
 
 [node name="Master" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
@@ -139,6 +156,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Quit"
 
-[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen/FullCheckbutton" to="." method="_on_full_checkbutton_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless/BorderCheckbutton" to="." method="_on_border_checkbutton_toggled"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Quit" to="." method="_on_quit_pressed"]
