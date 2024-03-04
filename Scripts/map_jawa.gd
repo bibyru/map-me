@@ -2,10 +2,15 @@ extends Node2D
 
 @onready var citylist = $Cities
 
-var PromptAns
+var Prompt
 
 func _ready():
-	PromptAns = get_owner().find_child("Prompt").find_child("Answer")
+	#           Control      Prompt
+	Prompt = get_parent().get_child(2)
 
-func ReqAns(id):
-	PromptAns.text = citylist.provJawa[id/10][id%10]
+func ReqAnsDisplay(id):
+	Prompt.AnswerLable.text = citylist.provJawa[id/10][id%10]
+
+func ReqAnsCheck(id):
+	if Prompt.answerid == id:
+		Prompt.GetQuery()

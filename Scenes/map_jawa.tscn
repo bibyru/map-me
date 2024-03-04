@@ -27,3 +27,19 @@ id = 10
 [node name="Dot2" parent="Dots" instance=ExtResource("4_ast0q")]
 position = Vector2(52.6, 73.4)
 id = 11
+
+[node name="Dot3" parent="Dots" instance=ExtResource("4_ast0q")]
+position = Vector2(70.4, 91.4)
+id = 20
+
+[node name="Dot4" parent="Dots" instance=ExtResource("4_ast0q")]
+position = Vector2(56.8, 77.2)
+id = 22
+
+[node name="Dot5" parent="Dots" instance=ExtResource("4_ast0q")]
+position = Vector2(50.2, 83.2)
+id = 23
+
+[node name="Dot6" parent="Dots" instance=ExtResource("4_ast0q")]
+position = Vector2(66.2, 89.2)
+id = 24

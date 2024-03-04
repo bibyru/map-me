@@ -9,13 +9,19 @@ var picture
 var destlist
 
 var picname : String
-var answer : int
+var answerid : int
 
 func _ready():
 	if island == 1:
 		destlist = preload("res://Prefabs/Prompt/jawa.tscn").instantiate()
 		add_child(destlist)
 		destlist = destlist.picnames
+	
+	GetQuery()
+
+
+func GetQuery():
+	picname = ""
 	
 	var path = destlist[randi()%destlist.size()]
 	picture = load(path)
@@ -34,4 +40,4 @@ func _ready():
 			picname += path[i]
 	
 	PicLable.text = picname
-	answer = int(idstring)
+	answerid = int(idstring)

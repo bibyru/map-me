@@ -51,7 +51,7 @@ vertical_alignment = 1
 
 [node name="Answer" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Wasd"
+text = "Answer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
