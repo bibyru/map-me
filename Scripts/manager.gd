@@ -25,3 +25,8 @@ func ReqPause():
 	else:
 		MenuOpt.IHide()
 		get_tree().paused = false
+
+func ReqQuit():
+	print("Quit? Okay")
+	get_tree().paused = true
+	get_tree().quit()

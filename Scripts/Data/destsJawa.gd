@@ -7,11 +7,10 @@ func _ready():
 	var dir = DirAccess.open(path)
 	dir.list_dir_begin()
 	
-	while true:
-		var filename = dir.get_next()
-		if filename == "":
-			break
-		else:
-			if filename.ends_with(".jpg"):
-				picnames.append(String(path+"/"+filename))
+	var filename = dir.get_next()
+	while (filename != ""):
+		if filename.ends_with(".import"):
+			filename = filename.replace(".import", "")
+			picnames.append(String(path+"/"+filename))
+		filename = dir.get_next()
 	dir.list_dir_end()
