@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs45is6ryhear"]
+[gd_scene load_steps=5 format=3 uid="uid://bs45is6ryhear"]
 
 [ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_6owuu"]
 [ext_resource type="Script" path="res://Scripts/prompt.gd" id="2_gyqke"]
 [ext_resource type="Texture2D" uid="uid://dvrsif5iuuv03" path="res://Sauce/Photos/buffer.jpg" id="3_ayk78"]
+[ext_resource type="Texture2D" uid="uid://78hdk2l7rjk4" path="res://Sauce/Sprites/scratch.png" id="3_laqur"]
 
 [node name="Prompt" type="Control"]
 layout_mode = 3
@@ -11,22 +12,44 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -173.0
-offset_bottom = -173.0
+offset_top = -152.0
+offset_bottom = -152.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_6owuu")
 script = ExtResource("2_gyqke")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -146.0
+offset_top = -163.0
+offset_right = 146.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="Scratch" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.00012207, 72)
+scale = Vector2(0.348826, 0.185652)
+texture = ExtResource("3_laqur")
+
 [node name="Name" type="Label" parent="."]
 layout_mode = 0
-offset_left = -111.0
-offset_top = -134.0
-offset_right = 111.0
-offset_bottom = -108.0
+offset_left = -138.0
+offset_top = 61.0
+offset_right = 139.0
+offset_bottom = 87.0
+theme_override_font_sizes/font_size = 20
 text = "Nama tempat"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Picture" type="Sprite2D" parent="."]
+position = Vector2(0, -51)
+texture = ExtResource("3_ayk78")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -55,5 +78,8 @@ text = "Answer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Picture" type="Sprite2D" parent="."]
-texture = ExtResource("3_ayk78")
+[node name="AnsColorTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="AnsColorTimer" to="." method="_on_ans_color_timer_timeout"]

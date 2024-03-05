@@ -16,5 +16,8 @@ func _on_button_pressed():
 		removeme = true
 
 func _on_timer_timeout():
-	# Control Title    World
-	parent.get_owner().get_owner().ReqStart()
+	Manager.World.ReqStart()
+	Manager.World.Parent.remove_child(get_owner())
+
+func _on_options_pressed():
+	Manager.ReqPause()

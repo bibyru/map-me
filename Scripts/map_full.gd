@@ -31,11 +31,14 @@ func _input(event):
 	if started == true && event is InputEventMouseButton && event.pressed:
 		
 		if location >= 1 && location <= 7:
-			PickedIsland()
+			
+			# CANNOT GO TO OTHER PLACES PLEASE
+			if location == 1:
+				PickedIsland()
 
 
 func PickedIsland():
-	get_owner().Pick.visible = 0
+	Manager.World.Pick.visible = 0
 	create_tween().tween_property(Map, "modulate", Color(1,1,1,0), 1)
 	create_tween().tween_property(Locks, "modulate", Color(1,1,1,0), 1)
 	
@@ -45,7 +48,7 @@ func PickedIsland():
 	add_child(onetimer)
 	
 	if location == 1:
-		onetimer.timeout.connect(get_owner().ReqIsland.bind(location))
+		onetimer.timeout.connect(Manager.World.ReqIsland.bind(location))
 	
 	onetimer.start()
 

@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bii86p24pdo23"]
+[gd_scene load_steps=3 format=3 uid="uid://bii86p24pdo23"]
 
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_0kngd"]
 [ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_wn3j2"]
-[ext_resource type="PackedScene" uid="uid://d16voeh1do8s3" path="res://Scenes/map_full.tscn" id="3_tllvv"]
-[ext_resource type="PackedScene" uid="uid://bk72d3xvc2jmq" path="res://Scenes/title.tscn" id="4_c483g"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_0kngd")
@@ -55,7 +53,3 @@ offset_bottom = 75.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
 text = "Jawa"
-
-[node name="MapFull" parent="CanvasBg/Control" instance=ExtResource("3_tllvv")]
-
-[node name="Title" parent="CanvasBg/Control" instance=ExtResource("4_c483g")]

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/dot.gd" id="1_wb6j7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34qil"]
-size = Vector2(5, 5)
+size = Vector2(3.75, 3.75)
 
 [node name="Dot" type="Node2D"]
 script = ExtResource("1_wb6j7")

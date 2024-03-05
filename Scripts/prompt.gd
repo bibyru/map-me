@@ -2,7 +2,9 @@ extends Control
 
 @onready var Pic = $Picture
 @onready var PicLable = $Name
+@onready var Scratch = $Scratch
 @onready var AnswerLable = $VBoxContainer/Answer
+@onready var AnsColorTimer = $AnsColorTimer
 
 var island
 var picture
@@ -12,21 +14,29 @@ var destlistsize
 var picname : String
 var answerid : int
 
+
 func _ready():
 	if island == 1:
-		destlist = preload("res://Prefabs/Prompt/jawa.tscn").instantiate()
+		destlist = preload("res://Prefabs/Destinations/jawa.tscn").instantiate()
 	
 	add_child(destlist)
 	destlist = destlist.picnames
 	destlistsize = destlist.size()
 	
+	SetAnsColor()
 	GetQuery()
 
 
 func GetRandomIndex():
 	return randi()%destlistsize
-	
+
 func GetQuery():
+	# Check if hide name
+	if Manager.get_child(0).prompthide == true:
+		HideName()
+	else:
+		ShowName()
+	
 	picname = ""
 	
 	var index = GetRandomIndex()
@@ -42,26 +52,75 @@ func GetQuery():
 		path = destlist[index]
 	
 	if repeating >= 2:
-		Manager.ReqQuit()
+		get_parent().remove_child(self)
+		Manager.World.ReqTitleScreen()
+		
+	else:
+		picture = ResourceLoader.load(path)
+		
+		Pic.texture = picture
+		
+		var idstring : String
+		for i in range(len(path)):
+			if i == 21 or i == 22:
+				idstring += path[i]
+			if i >= 24:
+				if path[i] == ".":
+					break
+				picname += path[i]
+		
+		if len(picname) > 17:
+			PicLable.set("theme_override_font_sizes/font_size", 18)
+		else:
+			PicLable.set("theme_override_font_sizes/font_size", 20)
+		
+		SetAnsColor()
+		PicLable.text = picname
+		answerid = int(idstring)
+		
+		# Repeat prevention
+		destlist[index] = String(path+"@")
+
+
+func CheckAns(id):
+	if AnsColorTimer.is_stopped():
+		if answerid == id:
+			CorrectAns()
+		else:
+			WrongAns()
+
+func CorrectAns():
+	SetAnsColor(1)
+	if AnsColorTimer.is_stopped():
+		AnsColorTimer.start()
+
+func WrongAns():
+	SetAnsColor(2)
+	if AnsColorTimer.is_stopped():
+		AnsColorTimer.start()
+
+func SetAnsColor(num = 0):
+	var thecolor = Color("#000")
+	if num == 1:
+		thecolor = Color("#b6ff24")
+	elif num == 2:
+		thecolor = Color("#ff0004")
+	AnswerLable.set("theme_override_colors/font_color", thecolor)
+
+func _on_ans_color_timer_timeout():
+	if AnswerLable.get("theme_override_colors/font_color") == Color("#b6ff24"):
+		GetQuery()
+	else:
+		SetAnsColor()
+
+
+func HideName():
+	PicLable.visible = 0
+	Scratch.visible = 1
 	
-	picture = ResourceLoader.load(path)
-	
-	Pic.texture = picture
-	
-	var idstring : String
-	for i in range(len(path)):
-		if i == 21 or i == 22:
-			idstring += path[i]
-		if i >= 24:
-			if path[i] == ".":
-				break
-			picname += path[i]
-	
-	PicLable.text = picname
-	answerid = int(idstring)
-	
-	# Repeat prevention
-	destlist[index] = String(path+"@")
+func ShowName():
+	PicLable.visible = 1
+	Scratch.visible = 0
 
 func ResetPaths():
 	for i in range(destlistsize):

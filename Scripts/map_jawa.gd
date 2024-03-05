@@ -12,5 +12,4 @@ func ReqAnsDisplay(id):
 	Prompt.AnswerLable.text = citylist.provJawa[id/10][id%10]
 
 func ReqAnsCheck(id):
-	if Prompt.answerid == id:
-		Prompt.GetQuery()
+	Prompt.CheckAns(id)

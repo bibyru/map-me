@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://4238oj53p822"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://4238oj53p822"]
 
 [ext_resource type="FontFile" uid="uid://207qe5tesuhk" path="res://Sauce/Theme/gomarice_round_pop.ttf" id="1_17pix"]
 [ext_resource type="Texture2D" uid="uid://cxr4f2ybvll0n" path="res://Sauce/Theme/checkbutton-on.png" id="1_r8vbg"]
@@ -51,6 +51,16 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0hs3"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.898039, 0.898039, 0.898039, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_afk7o"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.776471, 0.776471, 0.776471, 1)
+
 [resource]
 default_font = ExtResource("1_17pix")
 default_font_size = 20
@@ -75,3 +85,9 @@ CheckButton/styles/normal = SubResource("StyleBoxFlat_pn2dh")
 CheckButton/styles/pressed = SubResource("StyleBoxFlat_pn2dh")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_uxru1")
+TabBar/colors/font_hovered_color = Color(0, 0, 0, 1)
+TabBar/colors/font_selected_color = Color(0, 0, 0, 1)
+TabBar/colors/font_unselected_color = Color(0, 0, 0, 1)
+TabBar/styles/tab_hovered = SubResource("StyleBoxFlat_x0hs3")
+TabBar/styles/tab_selected = SubResource("StyleBoxFlat_x0hs3")
+TabBar/styles/tab_unselected = SubResource("StyleBoxFlat_afk7o")

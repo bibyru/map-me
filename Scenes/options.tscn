@@ -40,15 +40,30 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -51.0
+offset_left = -221.0
 offset_top = 34.0
-offset_right = 52.0
+offset_right = -118.0
 offset_bottom = 63.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 25
 text = "Options"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel"]
+[node name="TabBar" type="TabBar" parent="CanvasLayer/Control/MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 2.0
+offset_top = 25.0
+offset_right = 193.0
+offset_bottom = 65.0
+grow_horizontal = 2
+tab_alignment = 1
+tab_count = 2
+tab_0/title = "Settings"
+tab_1/title = "Game"
+
+[node name="Settings" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,74 +76,96 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 25
 
-[node name="Fullscreen" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Fullscreen" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Settings"]
 layout_direction = 2
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen"]
 layout_mode = 2
 text = "Fullscreen"
 
-[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen"]
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="FullCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen" instance=ExtResource("3_481o8")]
+[node name="FullCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen" instance=ExtResource("3_481o8")]
 layout_mode = 2
 
-[node name="Borderless" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Borderless" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Settings"]
 layout_direction = 2
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless"]
 layout_mode = 2
 text = "Borderless"
 
-[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless"]
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BorderCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless" instance=ExtResource("3_481o8")]
+[node name="BorderCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless" instance=ExtResource("3_481o8")]
 layout_mode = 2
 
-[node name="Master" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Master" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Master"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Master"]
 layout_mode = 2
 text = "Master Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Master"]
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Master"]
 layout_mode = 2
 step = 5.0
 value = 25.0
 
-[node name="Sound" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Sound" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Sound"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Sound"]
 layout_mode = 2
 text = "Sound Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Sound"]
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Sound"]
 layout_mode = 2
 step = 5.0
 value = 100.0
 
-[node name="Music" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer"]
+[node name="Music" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Settings"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Music"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Music"]
 layout_mode = 2
 text = "Music Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Music"]
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Music"]
 layout_mode = 2
 step = 5.0
 value = 100.0
+
+[node name="Game" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 126.0
+offset_top = 102.0
+offset_right = 504.0
+offset_bottom = 426.0
+
+[node name="HideName" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Game"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/MarginContainer/Panel/Game/HideName"]
+layout_mode = 2
+text = "Hide destination name"
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/Game/HideName"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HideNameCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Game/HideName" instance=ExtResource("3_481o8")]
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel"]
 layout_mode = 1
@@ -137,10 +174,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -164.0
-offset_top = -72.0
-offset_right = 164.0
-offset_bottom = -31.0
+offset_left = -227.0
+offset_top = -84.0
+offset_right = 227.0
+offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -152,11 +189,22 @@ text = "Close"
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="Title" type="Button" parent="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Title"
+
+[node name="Control2" type="Control" parent="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [node name="Quit" type="Button" parent="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
-[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Fullscreen/FullCheckbutton" to="." method="_on_full_checkbutton_toggled"]
-[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/VBoxContainer/Borderless/BorderCheckbutton" to="." method="_on_border_checkbutton_toggled"]
+[connection signal="tab_changed" from="CanvasLayer/Control/MarginContainer/Panel/TabBar" to="." method="_on_tab_bar_tab_changed"]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen/FullCheckbutton" to="." method="_on_full_checkbutton_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless/BorderCheckbutton" to="." method="_on_border_checkbutton_toggled"]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Game/HideName/HideNameCheckbutton" to="." method="_on_hide_name_checkbutton_toggled"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Title" to="." method="_on_title_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Quit" to="." method="_on_quit_pressed"]

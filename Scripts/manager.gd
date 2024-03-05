@@ -6,10 +6,13 @@ const px1080 = Vector2(1920, 1080)
 var LoadedOpt = preload("res://Scenes/options.tscn")
 var MenuOpt
 
+var World
+
 func _ready():
+	World = get_parent().get_child(1)
+	
 	MenuOpt = LoadedOpt.instantiate()
 	add_child(MenuOpt)
-	
 	MenuOpt.IHide()
 	
 	DisplayServer.window_set_size(px720)
@@ -27,6 +30,5 @@ func ReqPause():
 		get_tree().paused = false
 
 func ReqQuit():
-	print("Quit? Okay")
 	get_tree().paused = true
 	get_tree().quit()
