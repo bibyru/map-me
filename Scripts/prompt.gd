@@ -1,10 +1,14 @@
 extends Control
 
 @onready var Pic = $Picture
+
 @onready var PicLable = $Name
-@onready var Scratch = $Scratch
 @onready var AnswerLable = $VBoxContainer/Answer
+@onready var Scratch = $Scratch
+
 @onready var AnsColorTimer = $AnsColorTimer
+@onready var SoundCorrect = $Sounds/Correct
+@onready var SoundWrong = $Sounds/Wrong
 
 var island
 var picture
@@ -32,7 +36,7 @@ func GetRandomIndex():
 
 func GetQuery():
 	# Check if hide name
-	if Manager.get_child(0).prompthide == true:
+	if Manager.MenuOpt.prompthide == true:
 		HideName()
 	else:
 		ShowName()
@@ -53,6 +57,7 @@ func GetQuery():
 	
 	if repeating >= 2:
 		get_parent().remove_child(self)
+		Manager.World.Prompt = null
 		Manager.World.ReqTitleScreen()
 		
 	else:
@@ -69,7 +74,9 @@ func GetQuery():
 					break
 				picname += path[i]
 		
-		if len(picname) > 17:
+		if len(picname) > 25:
+			PicLable.set("theme_override_font_sizes/font_size", 15)
+		elif len(picname) > 17:
 			PicLable.set("theme_override_font_sizes/font_size", 18)
 		else:
 			PicLable.set("theme_override_font_sizes/font_size", 20)
@@ -93,22 +100,24 @@ func CorrectAns():
 	SetAnsColor(1)
 	if AnsColorTimer.is_stopped():
 		AnsColorTimer.start()
+		SoundCorrect.play()
 
 func WrongAns():
 	SetAnsColor(2)
 	if AnsColorTimer.is_stopped():
 		AnsColorTimer.start()
+		SoundWrong.play()
 
 func SetAnsColor(num = 0):
 	var thecolor = Color("#000")
 	if num == 1:
-		thecolor = Color("#b6ff24")
+		thecolor = Color("#00ff00")
 	elif num == 2:
 		thecolor = Color("#ff0004")
 	AnswerLable.set("theme_override_colors/font_color", thecolor)
 
 func _on_ans_color_timer_timeout():
-	if AnswerLable.get("theme_override_colors/font_color") == Color("#b6ff24"):
+	if AnswerLable.get("theme_override_colors/font_color") == Color("#00ff00"):
 		GetQuery()
 	else:
 		SetAnsColor()

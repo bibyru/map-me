@@ -3,15 +3,13 @@ extends Node2D
 const px720 = Vector2(1280, 720)
 const px1080 = Vector2(1920, 1080)
 
-var LoadedOpt = preload("res://Scenes/options.tscn")
 var MenuOpt
-
 var World
 
 func _ready():
 	World = get_parent().get_child(1)
 	
-	MenuOpt = LoadedOpt.instantiate()
+	MenuOpt = preload("res://Scenes/options.tscn").instantiate()
 	add_child(MenuOpt)
 	MenuOpt.IHide()
 	
