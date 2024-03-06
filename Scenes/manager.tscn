@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://1m2vgbywx338"]
+[gd_scene load_steps=3 format=3 uid="uid://1m2vgbywx338"]
 
 [ext_resource type="Script" path="res://Scripts/manager.gd" id="1_erj8j"]
+[ext_resource type="AudioStream" uid="uid://og2rxfq60w4c" path="res://Sauce/Sounds/music_asmalibrasi_smol.mp3" id="2_1pq63"]
 
 [node name="Manager" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_erj8j")
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_1pq63")
+autoplay = true
+bus = &"Music"
