@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs45is6ryhear"]
+[gd_scene load_steps=7 format=3 uid="uid://bs45is6ryhear"]
 
 [ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_6owuu"]
 [ext_resource type="Script" path="res://Scripts/prompt.gd" id="2_gyqke"]
 [ext_resource type="Texture2D" uid="uid://dvrsif5iuuv03" path="res://Sauce/Photos/buffer.jpg" id="3_ayk78"]
 [ext_resource type="Texture2D" uid="uid://78hdk2l7rjk4" path="res://Sauce/Sprites/scratch.png" id="3_laqur"]
+[ext_resource type="AudioStream" uid="uid://b0hffc4hut7jo" path="res://Sauce/Sounds/ans_correct.mp3" id="5_jhb13"]
+[ext_resource type="AudioStream" uid="uid://dn7ju2woevxp0" path="res://Sauce/Sounds/ans_wrong.mp3" id="6_bfvor"]
 
 [node name="Prompt" type="Control"]
 layout_mode = 3
@@ -79,7 +81,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AnsColorTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.75
 one_shot = true
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="Correct" type="AudioStreamPlayer" parent="Sounds"]
+process_mode = 3
+stream = ExtResource("5_jhb13")
+bus = &"Sound"
+
+[node name="Wrong" type="AudioStreamPlayer" parent="Sounds"]
+process_mode = 3
+stream = ExtResource("6_bfvor")
+bus = &"Sound"
 
 [connection signal="timeout" from="AnsColorTimer" to="." method="_on_ans_color_timer_timeout"]
