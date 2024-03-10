@@ -29,7 +29,7 @@ const provJawaTengah = [
 	"Pekalongan",
 	"Salatiga",
 	"Semarang",
-	"Surakarta",
+	"Solo",
 	"Tegal"
 ]
 
