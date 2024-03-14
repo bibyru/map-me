@@ -107,6 +107,7 @@ func GetQuery():
 		destlist[index] = String(path+"@")
 
 func Ending():
+	Manager.World.Map.ReqStopTimer()
 	Manager.World.Summary
 	Manager.World.ReqSummary()
 
@@ -127,6 +128,8 @@ func CorrectAns():
 	if wrongs == 0:
 		Manager.World.Map.CountCorrect()
 	wrongs = 0
+	
+	Manager.World.Map.ReqAddScore()
 
 func WrongAns():
 	SetAnsColor(2)
