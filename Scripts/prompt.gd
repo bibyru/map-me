@@ -1,14 +1,18 @@
 extends Control
 
+@onready var Query = $Query
 @onready var Pic = $Picture
 
-@onready var PicLable = $Name
-@onready var AnswerLable = $VBoxContainer/Answer
+@onready var PicLabel = $Name
+@onready var AnswerLabel = $VBoxContainer/Answer
 @onready var Scratch = $Scratch
 
 @onready var AnsColorTimer = $AnsColorTimer
 @onready var SoundCorrect = $Sounds/Correct
 @onready var SoundWrong = $Sounds/Wrong
+
+@onready var Hint = $Hint
+@onready var HintLabel = $Hint/Hint
 
 var island
 var picture
@@ -17,6 +21,12 @@ var destlistsize
 
 var picname : String
 var answerid : int
+var colorBlack = Color("#000", 0)
+var colorGreen = Color("#b6ff24")
+var colorRed = Color("#ff0004")
+
+var queries = 0
+var wrongs = 0
 
 
 func _ready():
@@ -31,10 +41,18 @@ func _ready():
 	GetQuery()
 
 
+func QueryCount():
+	queries += 1
+	Query.text = "Query %d of %d" % [queries, destlistsize]
+
 func GetRandomIndex():
 	return randi()%destlistsize
 
 func GetQuery():
+	QueryCount()
+	wrongs = 0
+	Hint.visible = 0
+	
 	# Check if hide name
 	if Manager.MenuOpt.prompthide == true:
 		HideName()
@@ -56,9 +74,9 @@ func GetQuery():
 		path = destlist[index]
 	
 	if repeating >= 2:
-		get_parent().remove_child(self)
-		Manager.World.Prompt = null
-		Manager.World.ReqTitleScreen()
+		Ending()
+		queries = destlistsize-1
+		QueryCount()
 		
 	else:
 		picture = ResourceLoader.load(path)
@@ -75,18 +93,22 @@ func GetQuery():
 				picname += path[i]
 		
 		if len(picname) > 25:
-			PicLable.set("theme_override_font_sizes/font_size", 15)
+			PicLabel.set("theme_override_font_sizes/font_size", 15)
 		elif len(picname) > 17:
-			PicLable.set("theme_override_font_sizes/font_size", 18)
+			PicLabel.set("theme_override_font_sizes/font_size", 18)
 		else:
-			PicLable.set("theme_override_font_sizes/font_size", 20)
+			PicLabel.set("theme_override_font_sizes/font_size", 20)
 		
 		SetAnsColor()
-		PicLable.text = picname
+		PicLabel.text = picname
 		answerid = int(idstring)
 		
 		# Repeat prevention
 		destlist[index] = String(path+"@")
+
+func Ending():
+	Manager.World.Summary
+	Manager.World.ReqSummary()
 
 
 func CheckAns(id):
@@ -101,34 +123,43 @@ func CorrectAns():
 	if AnsColorTimer.is_stopped():
 		AnsColorTimer.start()
 		SoundCorrect.play()
+	
+	if wrongs == 0:
+		Manager.World.Map.CountCorrect()
+	wrongs = 0
 
 func WrongAns():
 	SetAnsColor(2)
 	if AnsColorTimer.is_stopped():
 		AnsColorTimer.start()
 		SoundWrong.play()
+	
+	wrongs += 1
+	if wrongs >= 3:
+		Hint.visible = 1
+		Manager.World.Map.ReqHint(answerid)
 
 func SetAnsColor(num = 0):
-	var thecolor = Color("#000")
+	var thecolor = colorBlack
 	if num == 1:
-		thecolor = Color("#00ff00")
+		thecolor = colorGreen
 	elif num == 2:
-		thecolor = Color("#ff0004")
-	AnswerLable.set("theme_override_colors/font_color", thecolor)
+		thecolor = colorRed
+	AnswerLabel.set("theme_override_colors/font_outline_color", thecolor)
 
 func _on_ans_color_timer_timeout():
-	if AnswerLable.get("theme_override_colors/font_color") == Color("#00ff00"):
+	if AnswerLabel.get("theme_override_colors/font_outline_color") == colorGreen:
 		GetQuery()
 	else:
 		SetAnsColor()
 
 
 func HideName():
-	PicLable.visible = 0
+	PicLabel.visible = 0
 	Scratch.visible = 1
 	
 func ShowName():
-	PicLable.visible = 1
+	PicLabel.visible = 1
 	Scratch.visible = 0
 
 func ResetPaths():

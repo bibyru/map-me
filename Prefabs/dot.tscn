@@ -12,7 +12,7 @@ script = ExtResource("1_wb6j7")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_cbgik")
-vframes = 2
+vframes = 3
 
 [node name="Area2D" type="Area2D" parent="."]
 

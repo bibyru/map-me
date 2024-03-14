@@ -3,6 +3,14 @@ extends Node2D
 @onready var TabSettings = $CanvasLayer/Control/MarginContainer/Panel/Settings
 @onready var TabGame = $CanvasLayer/Control/MarginContainer/Panel/Game
 
+@onready var SliderMaster = $CanvasLayer/Control/MarginContainer/Panel/Settings/Master/MasterHSlider
+@onready var SliderSound = $CanvasLayer/Control/MarginContainer/Panel/Settings/Sound/SoundHSlider
+@onready var SliderMusic = $CanvasLayer/Control/MarginContainer/Panel/Settings/Music/MusicHSlider
+
+@onready var BusMaster = AudioServer.get_bus_index("Master")
+@onready var BusSound = AudioServer.get_bus_index("Sound")
+@onready var BusMusic = AudioServer.get_bus_index("Music")
+
 var prompthide = false
 
 func IHide():
@@ -14,6 +22,9 @@ func IShow():
 
 func _ready():
 	ShowSettings()
+	SliderMaster.value = 100
+	SliderSound.value = 100
+	SliderMusic.value = 50
 
 
 func ShowSettings():
@@ -42,6 +53,16 @@ func _on_border_checkbutton_toggled(state):
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
 	else:
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
+
+
+func _on_master_h_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(BusMaster, linear_to_db( float(value)/100 ))
+
+func _on_sound_h_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(BusSound, linear_to_db( float(value)/100 ))
+
+func _on_music_h_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(BusMusic, linear_to_db( float(value)/150 ))
 
 
 # GAME

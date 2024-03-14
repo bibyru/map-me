@@ -114,7 +114,7 @@ layout_mode = 2
 text = "Master Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Master"]
+[node name="MasterHSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Master"]
 layout_mode = 2
 step = 5.0
 value = 25.0
@@ -127,7 +127,7 @@ layout_mode = 2
 text = "Sound Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Sound"]
+[node name="SoundHSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Sound"]
 layout_mode = 2
 step = 5.0
 value = 100.0
@@ -140,7 +140,7 @@ layout_mode = 2
 text = "Music Volume"
 horizontal_alignment = 1
 
-[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Music"]
+[node name="MusicHSlider" type="HSlider" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Music"]
 layout_mode = 2
 step = 5.0
 value = 100.0
@@ -204,6 +204,9 @@ text = "Quit"
 [connection signal="tab_changed" from="CanvasLayer/Control/MarginContainer/Panel/TabBar" to="." method="_on_tab_bar_tab_changed"]
 [connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen/FullCheckbutton" to="." method="_on_full_checkbutton_toggled"]
 [connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless/BorderCheckbutton" to="." method="_on_border_checkbutton_toggled"]
+[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Master/MasterHSlider" to="." method="_on_master_h_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Sound/SoundHSlider" to="." method="_on_sound_h_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Music/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
 [connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Game/HideName/HideNameCheckbutton" to="." method="_on_hide_name_checkbutton_toggled"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Title" to="." method="_on_title_pressed"]

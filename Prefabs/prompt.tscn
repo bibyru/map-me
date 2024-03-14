@@ -14,8 +14,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -152.0
-offset_bottom = -152.0
+offset_top = -149.0
+offset_bottom = -149.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_6owuu")
@@ -32,11 +32,18 @@ offset_right = 146.0
 offset_bottom = 94.0
 grow_horizontal = 2
 
-[node name="Scratch" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(0.00012207, 72)
-scale = Vector2(0.348826, 0.185652)
-texture = ExtResource("3_laqur")
+[node name="Query" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -66.5
+offset_top = -194.0
+offset_right = 66.5
+offset_bottom = -170.0
+grow_horizontal = 2
+text = "Query # of #"
+horizontal_alignment = 1
 
 [node name="Name" type="Label" parent="."]
 layout_mode = 0
@@ -48,10 +55,6 @@ theme_override_font_sizes/font_size = 20
 text = "Nama tempat"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Picture" type="Sprite2D" parent="."]
-position = Vector2(0, -51)
-texture = ExtResource("3_ayk78")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -76,13 +79,46 @@ vertical_alignment = 1
 
 [node name="Answer" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 20
 text = "Answer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnsColorTimer" type="Timer" parent="."]
-wait_time = 0.75
-one_shot = true
+[node name="Hint" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 157.0
+offset_top = -160.0
+offset_right = 379.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Text" type="Label" parent="Hint"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Hint:"
+vertical_alignment = 1
+
+[node name="Hint" type="Label" parent="Hint"]
+layout_mode = 2
+text = "Wasd"
+vertical_alignment = 1
+
+[node name="Picture" type="Sprite2D" parent="."]
+position = Vector2(0, -51)
+texture = ExtResource("3_ayk78")
+
+[node name="Scratch" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.00012207, 72)
+scale = Vector2(0.348826, 0.185652)
+texture = ExtResource("3_laqur")
 
 [node name="Sounds" type="Node2D" parent="."]
 
@@ -95,5 +131,9 @@ bus = &"Sound"
 process_mode = 3
 stream = ExtResource("6_bfvor")
 bus = &"Sound"
+
+[node name="AnsColorTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
 
 [connection signal="timeout" from="AnsColorTimer" to="." method="_on_ans_color_timer_timeout"]

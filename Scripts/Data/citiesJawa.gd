@@ -1,30 +1,32 @@
 extends Node2D
 
-const provBanten = [
+# 0
+const Banten = [
 	"Cilegon",
 	"Serang",
-	"Tangerang",
-	"Tangerang Selatan"
+	"Tangerang"
 ]
 
-const provJakarta = [
+# 1
+const Jakarta = [
 	"Kepulauan Seribu",
 	"Jakarta"
 ]
 
-const provJawaBarat = [
+# 2
+const JawaBarat = [
 	"Bandung",
-	"Banjar",
+	"Cirebon",
 	"Bekasi",
 	"Bogor",
 	"Cimahi",
-	"Cirebon",
 	"Depok",
 	"Sukabumi",
 	"Tasikmalaya"
 ]
 
-const provJawaTengah = [
+# 3
+const JawaTengah = [
 	"Magelang",
 	"Pekalongan",
 	"Salatiga",
@@ -33,7 +35,8 @@ const provJawaTengah = [
 	"Tegal"
 ]
 
-const provYogya = [
+# 4
+const Yogya = [
 	"Bantul",
 	"Gunungkidul",
 	"Kulon Progo",
@@ -41,7 +44,8 @@ const provYogya = [
 	"Yogyakarta"
 ]
 
-const provJawaTimur = [
+# 5
+const JawaTimur = [
 	"Batu",
 	"Blitar",
 	"Kediri",
@@ -53,11 +57,29 @@ const provJawaTimur = [
 	"Surabaya"
 ]
 
-const provJawa = [
-	provBanten,
-	provJakarta,
-	provJawaBarat,
-	provJawaTengah,
-	provYogya,
-	provJawaTimur
+# 6
+const Madura = [
+	"Bangkalan",
+	"Sumenep",
+	"Batang-Batang"
+]
+
+const All = [
+	Banten,
+	Jakarta,
+	JawaBarat,
+	JawaTengah,
+	Yogya,
+	JawaTimur,
+	Madura
+]
+
+const AllName = [
+	"Banten",
+	"Jakarta",
+	"Jawa Barat",
+	"Jawa Tengah",
+	"Yogyakarta",
+	"Jawa Timur",
+	"Madura"
 ]
