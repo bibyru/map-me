@@ -1,6 +1,8 @@
 extends Control
 
-@onready var CorrectCounter = $Panel/VBoxContainer/Correct/CorrectCounter
+@onready var CorrectLabel = $Panel/VBoxContainer/Correct/CorrectLabel
+@onready var ScoreLabel = $Panel/VBoxContainer/Score/ScoreLabel
+@onready var TimeLabel = $Panel/VBoxContainer/Time/TimeLabel
 
 func _on_title_pressed():
 	Manager.World.Summary = null

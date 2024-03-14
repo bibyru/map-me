@@ -25,8 +25,10 @@ var colorBlack = Color("#000", 0)
 var colorGreen = Color("#b6ff24")
 var colorRed = Color("#ff0004")
 
+var maxquery = 30
 var queries = 0
 var wrongs = 0
+var endit = false
 
 
 func _ready():
@@ -41,9 +43,10 @@ func _ready():
 	GetQuery()
 
 
+# QUERY
 func QueryCount():
 	queries += 1
-	Query.text = "Query %d of %d" % [queries, destlistsize]
+	Query.text = "Query %d of %d" % [queries, maxquery]
 
 func GetRandomIndex():
 	return randi()%destlistsize
@@ -54,7 +57,7 @@ func GetQuery():
 	Hint.visible = 0
 	
 	# Check if hide name
-	if Manager.MenuOpt.prompthide == true:
+	if Manager.Options.prompthide == true:
 		HideName()
 	else:
 		ShowName()
@@ -73,12 +76,11 @@ func GetQuery():
 			repeating += 1
 		path = destlist[index]
 	
-	if repeating >= 2:
+	if repeating >= 2 || queries > maxquery:
 		Ending()
-		queries = destlistsize-1
-		QueryCount()
+	
+	if endit == false:
 		
-	else:
 		picture = ResourceLoader.load(path)
 		
 		Pic.texture = picture
@@ -107,11 +109,14 @@ func GetQuery():
 		destlist[index] = String(path+"@")
 
 func Ending():
-	Manager.World.Map.ReqStopTimer()
-	Manager.World.Summary
+	endit = true
+	queries = maxquery-1
+	QueryCount()
+	Manager.World.Map.Stats.ReqStopTimer()
 	Manager.World.ReqSummary()
 
 
+# ANSWER
 func CheckAns(id):
 	if AnsColorTimer.is_stopped():
 		if answerid == id:
@@ -126,10 +131,16 @@ func CorrectAns():
 		SoundCorrect.play()
 	
 	if wrongs == 0:
-		Manager.World.Map.CountCorrect()
-	wrongs = 0
+		Manager.World.Map.Stats.UpdateCorrect()
 	
-	Manager.World.Map.ReqAddScore()
+	if wrongs == 0:
+		if PicLabel.visible == false:
+			Manager.World.Map.Stats.ReqAddScore()
+		Manager.World.Map.Stats.ReqAddScore()
+	elif wrongs < 3:
+		Manager.World.Map.Stats.ReqAddScore(1)
+	
+	wrongs = 0
 
 func WrongAns():
 	SetAnsColor(2)
@@ -157,6 +168,7 @@ func _on_ans_color_timer_timeout():
 		SetAnsColor()
 
 
+# MISC
 func HideName():
 	PicLabel.visible = 0
 	Scratch.visible = 1

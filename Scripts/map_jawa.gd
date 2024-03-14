@@ -94,6 +94,3 @@ func LightOffDots():
 
 func _on_light_up_timer_timeout():
 	LightOffDots()
-
-func _on_play_timer_timeout():
-	UpdateTimer()

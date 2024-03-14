@@ -38,7 +38,9 @@ func ReqTitleScreen():
 func ReqSummary():
 	Summary = SummaryLoad.instantiate()
 	Parent.add_child(Summary)
-	Summary.CorrectCounter.text = "%d / %d" % [Map.correctCounter, Prompt.destlistsize]
+	Summary.CorrectLabel.text = "%d / %d" % [Map.Stats.correct, Prompt.maxquery]
+	Summary.ScoreLabel.text = "%d" % [Map.Stats.score]
+	Summary.TimeLabel.text = Map.Stats.timetext
 
 
 func ReqStart():

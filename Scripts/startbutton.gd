@@ -1,19 +1,15 @@
 extends Node2D
 
 var parent
-var removeme = false
 
 func _ready():
 	parent = get_parent()
 
-func _process(delta):
-	if removeme == true:
-		parent.position.y -= .5
-
 func _on_button_pressed():
 	if $Timer.is_stopped():
 		$Timer.start()
-		removeme = true
+		
+		create_tween().tween_property(get_parent(), "position:y", -150, 1)
 
 func _on_timer_timeout():
 	Manager.World.ReqStart()
