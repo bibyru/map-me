@@ -23,7 +23,7 @@ This project was developed using Godot v4.1.2.
 | :- | :- | :- |
 | Game programmer | bibyru (Ruby) | 3 days |
 | Project lead | bibyru (Ruby) | 5 days |
-| Visual designer | bibyru (Ruby) | 2 day |
+| Visual designer | bibyru (Ruby) | 2 days |
 | Game designer | bibyru (Ruby) | 1 day |
 | Sound designer | bibyru (Ruby) | 1 day |
 
