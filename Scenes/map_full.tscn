@@ -1,22 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://d16voeh1do8s3"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://brnwe8enxi7py" path="res://Sauce/Sprites/Maps.png" id="1_svqqe"]
-[ext_resource type="PackedScene" uid="uid://s6owix7dno27" path="res://Prefabs/lock.tscn" id="2_0d4bs"]
-[ext_resource type="Script" path="res://Scripts/map_full.gd" id="2_be5vt"]
+[ext_resource type="Script" path="res://Scripts/map_full.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://brnwe8enxi7py" path="res://Sauce/Sprites/Maps.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://s6owix7dno27" path="res://Prefabs/lock.tscn" id="3"]
 
 [node name="MapFull" type="Node2D"]
-script = ExtResource("2_be5vt")
+script = ExtResource("1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(640, 466)
 scale = Vector2(4.25, 4.25)
-texture = ExtResource("1_svqqe")
+texture = ExtResource("2")
 vframes = 5
 frame = 2
 
 [node name="Areas" type="Node2D" parent="."]
-position = Vector2(0.0010376, 0.000244141)
+position = Vector2(0.001037599984556437, 0.0002441410033497959)
 
 [node name="0_Sumatra" type="Area2D" parent="Areas"]
 
@@ -56,44 +56,44 @@ polygon = PackedVector2Array(690, 585, 884, 571, 894, 626, 778, 662, 686, 662, 6
 [node name="7_Papua" type="Area2D" parent="Areas"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/7_Papua"]
-polygon = PackedVector2Array(900, 455, 940, 370, 1210, 395, 1210, 675, 1090, 615, 1070, 535, 970, 510, 941.69, 477.646, 935, 470)
+polygon = PackedVector2Array(900, 455, 940, 370, 1210, 395, 1210, 675, 1090, 615, 1070, 535, 970, 510, 941.6900024414062, 477.64599609375, 935, 470)
 
 [node name="Locks" type="Node2D" parent="."]
-position = Vector2(0.0010376, 0.000244141)
+position = Vector2(0.001037599984556437, 0.0002441410033497959)
 
-[node name="Lock" parent="Locks" instance=ExtResource("2_0d4bs")]
+[node name="Lock" parent="Locks" instance=ExtResource("3")]
 position = Vector2(250, 398)
 scale = Vector2(3.5, 3.5)
 
-[node name="Lock2" parent="Locks" instance=ExtResource("2_0d4bs")]
+[node name="Lock2" parent="Locks" instance=ExtResource("3")]
 position = Vector2(536, 419)
 scale = Vector2(3.5, 3.5)
 
-[node name="Lock3" parent="Locks" instance=ExtResource("2_0d4bs")]
+[node name="Lock3" parent="Locks" instance=ExtResource("3")]
 position = Vector2(709, 456)
 scale = Vector2(3.5, 3.5)
 
-[node name="Lock4" parent="Locks" instance=ExtResource("2_0d4bs")]
+[node name="Lock4" parent="Locks" instance=ExtResource("3")]
 position = Vector2(886, 477)
 scale = Vector2(3.5, 3.5)
 
-[node name="Lock5" parent="Locks" instance=ExtResource("2_0d4bs")]
+[node name="Lock5" parent="Locks" instance=ExtResource("3")]
 position = Vector2(1082, 477)
 scale = Vector2(3.5, 3.5)
 
-[node name="Lock6" parent="Locks" instance=ExtResource("2_0d4bs")]
+[node name="Lock6" parent="Locks" instance=ExtResource("3")]
 position = Vector2(772, 608)
 scale = Vector2(3.5, 3.5)
 
-[node name="Lock7" parent="Locks" instance=ExtResource("2_0d4bs")]
+[node name="Lock7" parent="Locks" instance=ExtResource("3")]
 position = Vector2(636, 603)
 scale = Vector2(3.5, 3.5)
 
-[connection signal="mouse_entered" from="Areas/0_Sumatra" to="." method="_on__sumatra_mouse_entered"]
-[connection signal="mouse_entered" from="Areas/1_Jawa" to="." method="_on__jawa_mouse_entered"]
-[connection signal="mouse_entered" from="Areas/2_Kalimantan" to="." method="_on__kalimantan_mouse_entered"]
-[connection signal="mouse_entered" from="Areas/3_Sulawesi" to="." method="_on__sulawesi_mouse_entered"]
-[connection signal="mouse_entered" from="Areas/4_Maluku" to="." method="_on__maluku_mouse_entered"]
-[connection signal="mouse_entered" from="Areas/5_NTB" to="." method="_on__ntb_mouse_entered"]
-[connection signal="mouse_entered" from="Areas/6_NTT" to="." method="_on__ntt_mouse_entered"]
-[connection signal="mouse_entered" from="Areas/7_Papua" to="." method="_on__papua_mouse_entered"]
+[connection signal="mouse_entered" from="Areas/0_Sumatra" to="." method="_on__sumatra_mouse_entered" flags=18]
+[connection signal="mouse_entered" from="Areas/1_Jawa" to="." method="_on__jawa_mouse_entered" flags=18]
+[connection signal="mouse_entered" from="Areas/2_Kalimantan" to="." method="_on__kalimantan_mouse_entered" flags=18]
+[connection signal="mouse_entered" from="Areas/3_Sulawesi" to="." method="_on__sulawesi_mouse_entered" flags=18]
+[connection signal="mouse_entered" from="Areas/4_Maluku" to="." method="_on__maluku_mouse_entered" flags=18]
+[connection signal="mouse_entered" from="Areas/5_NTB" to="." method="_on__ntb_mouse_entered" flags=18]
+[connection signal="mouse_entered" from="Areas/6_NTT" to="." method="_on__ntt_mouse_entered" flags=18]
+[connection signal="mouse_entered" from="Areas/7_Papua" to="." method="_on__papua_mouse_entered" flags=18]

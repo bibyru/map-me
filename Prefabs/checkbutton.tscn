@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4rmp84rxn8fy"]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://Scripts/checkbutton.gd" id="1_1k2hw"]
-[ext_resource type="Texture2D" uid="uid://cxr4f2ybvll0n" path="res://Sauce/Theme/checkbutton-on.png" id="1_pgw68"]
-[ext_resource type="Texture2D" uid="uid://vwpdqyvsmms6" path="res://Sauce/Theme/checkbutton-off.png" id="2_m8o67"]
+[ext_resource type="Script" path="res://Scripts/checkbutton.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cxr4f2ybvll0n" path="res://Sauce/Theme/checkbutton-on.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://vwpdqyvsmms6" path="res://Sauce/Theme/checkbutton-off.png" id="3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlx7a"]
 size = Vector2(48, 28)
@@ -11,20 +11,20 @@ size = Vector2(48, 28)
 layout_mode = 3
 anchors_preset = 0
 mouse_filter = 1
-script = ExtResource("1_1k2hw")
+script = ExtResource("1")
 
 [node name="on" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(-22.1818, 12)
-scale = Vector2(2.18182, 2.18182)
-texture = ExtResource("1_pgw68")
+position = Vector2(-22.18180084228516, 12)
+scale = Vector2(2.181819915771484, 2.181819915771484)
+texture = ExtResource("2")
 
 [node name="off" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-22, 12)
-scale = Vector2(2.17626, 2.17626)
-texture = ExtResource("2_m8o67")
+scale = Vector2(2.176259994506836, 2.176259994506836)
+texture = ExtResource("3")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-34, 5.5)
@@ -33,5 +33,5 @@ position = Vector2(-34, 5.5)
 position = Vector2(12, 6.5)
 shape = SubResource("RectangleShape2D_hlx7a")
 
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited" flags=18]

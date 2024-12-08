@@ -12,8 +12,4 @@ dest_files=["res://.godot/imported/ans_correct.mp3-22898a3a293195f396ffdc645bace
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4
+dummy_value_ignore_me=0

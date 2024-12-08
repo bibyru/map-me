@@ -12,8 +12,4 @@ dest_files=["res://.godot/imported/sfx_buttons.mp3-7e51cf6887fcd76cea7729a3c2944
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4
+dummy_value_ignore_me=0

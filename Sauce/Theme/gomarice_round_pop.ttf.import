@@ -12,22 +12,4 @@ dest_files=["res://.godot/imported/gomarice_round_pop.ttf-20b1f2e738e5e1701551d8
 
 [params]
 
-Rendering=null
-antialiasing=1
-generate_mipmaps=false
-multichannel_signed_distance_field=false
-msdf_pixel_range=8
-msdf_size=48
-allow_system_fallback=true
-force_autohinter=false
-hinting=1
-subpixel_positioning=1
-oversampling=0.0
-Fallbacks=null
-fallbacks=[]
-Compress=null
-compress=true
-preload=[]
-language_support={}
-script_support={}
-opentype_features={}
+dummy_value_ignore_me=0

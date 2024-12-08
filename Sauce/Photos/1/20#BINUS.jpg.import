@@ -1,0 +1,18 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://fjuthky1evm7"
+path="res://.godot/imported/20#BINUS.jpg-7b9bae73538bccb972bbed96b09248b6.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Sauce/Photos/1/20#BINUS.jpg"
+dest_files=["res://.godot/imported/20#BINUS.jpg-7b9bae73538bccb972bbed96b09248b6.ctex"]
+
+[params]
+
+dummy_value_ignore_me=0

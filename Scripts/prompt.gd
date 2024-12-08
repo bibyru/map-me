@@ -25,7 +25,7 @@ var colorBlack = Color("#000", 0)
 var colorGreen = Color("#b6ff24")
 var colorRed = Color("#ff0004")
 
-var maxquery = 30
+var maxquery = 20
 var queries = 0
 var wrongs = 0
 var endit = false
@@ -130,7 +130,7 @@ func CorrectAns():
 		AnsColorTimer.start()
 		SoundCorrect.play()
 	
-	if wrongs == 0:
+	if wrongs <= 3:
 		Manager.World.Map.Stats.UpdateCorrect()
 	
 	if wrongs == 0:
@@ -149,9 +149,8 @@ func WrongAns():
 		SoundWrong.play()
 	
 	wrongs += 1
-	if wrongs >= 3:
-		Hint.visible = 1
-		Manager.World.Map.ReqHint(answerid)
+	Hint.visible = 1
+	Manager.World.Map.ReqHint(answerid)
 
 func SetAnsColor(num = 0):
 	var thecolor = colorBlack

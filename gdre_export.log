@@ -1,0 +1,173 @@
+GDRE Tools v0.8.0
+Windows 10.0.19045, NVIDIA GeForce GTX 1660 SUPER, opengl3
+Extracted 338 files, no errors detected!
+WARNING: Converting lossy imports, you may lose fidelity for indicated assets when re-importing upon loading the project
+   at: ImportExporter::_export_imports (modules\gdsdecomp\utility\import_exporter.cpp:181)
+Exporting resources in parallel...
+Saved project config project.godot.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     0
+Failed scripts:                         0
+Imported resources for export session:  160
+Successfully converted:                 160
+Lossy:                                  131
+Rewrote metadata:                       143
+Non-importable conversions:             1
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+The following files were converted from an import that was stored lossy.
+You may lose fidelity when re-importing these files upon loading the project.
+res://.godot/imported/00#Gunung Batu Lawang.jpg-2113b55ccf6b0788e3cfdf2dcc97e6e2.ctex to res://Sauce/Photos/1/00#Gunung Batu Lawang.jpg
+res://.godot/imported/00#Istana Pasir.jpg-5de16ce86e8ebf1e6651d1ed280b4a6c.ctex to res://Sauce/Photos/1/00#Istana Pasir.jpg
+res://.godot/imported/00#Pulau Merak Besar.jpg-8c6c13868579e121a43dac1c6f9724ef.ctex to res://Sauce/Photos/1/00#Pulau Merak Besar.jpg
+res://.godot/imported/01#Aqualand.jpg-59b2b494fb8859dfdd1296ab02b2c0d8.ctex to res://Sauce/Photos/1/01#Aqualand.jpg
+res://.godot/imported/01#Pantai Karang Bolong.jpg-12b52bbb2d46ab02626b6870570f4623.ctex to res://Sauce/Photos/1/01#Pantai Karang Bolong.jpg
+res://.godot/imported/01#Taman MBS.jpg-95ed691953c0ef1a8d6951857024bb11.ctex to res://Sauce/Photos/1/01#Taman MBS.jpg
+res://.godot/imported/02#BINUS.jpg-007f28482159cdf430667b01125855ae.ctex to res://Sauce/Photos/1/02#BINUS.jpg
+res://.godot/imported/02#BSD Extreme Park.jpg-ef02935750d0f54b63a1b45fa7519775.ctex to res://Sauce/Photos/1/02#BSD Extreme Park.jpg
+res://.godot/imported/02#Floating Castle.jpg-3e5192ce6f1f38563a2252e576a88bfa.ctex to res://Sauce/Photos/1/02#Floating Castle.jpg
+res://.godot/imported/02#La Riviera.jpg-024f702f89279307ec9f0ee3339cfad4.ctex to res://Sauce/Photos/1/02#La Riviera.jpg
+res://.godot/imported/10#Pulau Ayer.jpg-89b9904212b8cc794294b1cc26262686.ctex to res://Sauce/Photos/1/10#Pulau Ayer.jpg
+res://.godot/imported/10#Pulau Macan.jpg-0de79cbf9d7377a79a4071f39203dd07.ctex to res://Sauce/Photos/1/10#Pulau Macan.jpg
+res://.godot/imported/10#Pulau Tidung.jpg-85fa199a51c1d7deeb9197e82f6103f8.ctex to res://Sauce/Photos/1/10#Pulau Tidung.jpg
+res://.godot/imported/11#BINUS.jpg-d41f825f0cb271eaab85d166d875654f.ctex to res://Sauce/Photos/1/11#BINUS.jpg
+res://.godot/imported/11#By The Sea.jpg-fe8b386bd26066b65eeca4f74064edb3.ctex to res://Sauce/Photos/1/11#By The Sea.jpg
+res://.godot/imported/11#Dunia Fantasi.jpg-a3ec33241eb196b1a257045169f8dd85.ctex to res://Sauce/Photos/1/11#Dunia Fantasi.jpg
+res://.godot/imported/11#Keong Mas.jpg-4f29dee5d504caa132149f78ebc5349c.ctex to res://Sauce/Photos/1/11#Keong Mas.jpg
+res://.godot/imported/11#Monumen Nasional.jpg-30c6080020a417b1a3a5c1d9ce512c7c.ctex to res://Sauce/Photos/1/11#Monumen Nasional.jpg
+res://.godot/imported/11#Museum Fatahillah.jpg-6c5c49721df8dde568d8c168d04f2d59.ctex to res://Sauce/Photos/1/11#Museum Fatahillah.jpg
+res://.godot/imported/11#Patung Selamat Datang.jpg-335151577294f633ab6157714831d6f9.ctex to res://Sauce/Photos/1/11#Patung Selamat Datang.jpg
+res://.godot/imported/20#BINUS.jpg-7b9bae73538bccb972bbed96b09248b6.ctex to res://Sauce/Photos/1/20#BINUS.jpg
+res://.godot/imported/20#Lug's Gravity.jpg-53532e7acedafd898172f87c504646b7.ctex to res://Sauce/Photos/1/20#Lug's Gravity.jpg
+res://.godot/imported/20#Tangkuban Perahu.jpg-30ddbc2363701da0317fe34321f5eb38.ctex to res://Sauce/Photos/1/20#Tangkuban Perahu.jpg
+res://.godot/imported/20#The Great Asia Africa.jpg-9cfe6f714e1ec98acb25437c763dcd0c.ctex to res://Sauce/Photos/1/20#The Great Asia Africa.jpg
+res://.godot/imported/21#Keraton Kasepuhan.jpg-d7442bbb68758a0a23528cd89711b5c2.ctex to res://Sauce/Photos/1/21#Keraton Kasepuhan.jpg
+res://.godot/imported/21#Situ Cicerem.jpg-d6ed67e39aae66ce4d6cf8c01c87acbd.ctex to res://Sauce/Photos/1/21#Situ Cicerem.jpg
+res://.godot/imported/21#Taman Goa Sunyaragi.jpg-115b8e6a9510621e88dcc5f55266f248.ctex to res://Sauce/Photos/1/21#Taman Goa Sunyaragi.jpg
+res://.godot/imported/22#Snow World International.jpg-e211b7cf38b9444cea2cb4262d3a47aa.ctex to res://Sauce/Photos/1/22#Snow World International.jpg
+res://.godot/imported/23#Cimory.jpg-d0194cead15cb036e73f89d252ed972e.ctex to res://Sauce/Photos/1/23#Cimory.jpg
+res://.godot/imported/23#Kebun Raya.jpg-e009c0427e105867b3ef97d8343a1a6a.ctex to res://Sauce/Photos/1/23#Kebun Raya.jpg
+res://.godot/imported/23#Taman Safari.jpg-7feebbab81b3e3328a6517ae1cfabc07.ctex to res://Sauce/Photos/1/23#Taman Safari.jpg
+res://.godot/imported/24#Curug BugBrug.jpg-4486c556c3b91c036056c7aca244b8a7.ctex to res://Sauce/Photos/1/24#Curug BugBrug.jpg
+res://.godot/imported/24#Curug Cimahi.jpg-afb222fe4bc1f286ef6ab8772d2390fe.ctex to res://Sauce/Photos/1/24#Curug Cimahi.jpg
+res://.godot/imported/25#Taman Bunga Wiladatika.jpg-fa6effcf78c3ec15c239be5b46ce1754.ctex to res://Sauce/Photos/1/25#Taman Bunga Wiladatika.jpg
+res://.godot/imported/26#Bravo Adventure.jpg-873a5d92885b321eac2532f027048fb7.ctex to res://Sauce/Photos/1/26#Bravo Adventure.jpg
+res://.godot/imported/26#Situ Gunung Suspension Bridge.jpg-50526e6dd1499779460b5a1c9eedfa53.ctex to res://Sauce/Photos/1/26#Situ Gunung Suspension Bridge.jpg
+res://.godot/imported/27#Gua Malawang.jpg-fc348a9c2b49876b230733b0fdba395f.ctex to res://Sauce/Photos/1/27#Gua Malawang.jpg
+res://.godot/imported/27#Gunung Galunggung.jpg-7f2db2dc7253a825733a1f59d148f829.ctex to res://Sauce/Photos/1/27#Gunung Galunggung.jpg
+res://.godot/imported/27#Rumah Batu Karangnunggal.jpg-9b2147f0ce2ae4569dc4f784c9e3e93e.ctex to res://Sauce/Photos/1/27#Rumah Batu Karangnunggal.jpg
+res://.godot/imported/30#Candi Borobudur.jpg-6d64432c393808685ca815dba82d1843.ctex to res://Sauce/Photos/1/30#Candi Borobudur.jpg
+res://.godot/imported/30#Gereja Ayam.jpg-c41896e61469d5be0a1ea212cdecbee5.ctex to res://Sauce/Photos/1/30#Gereja Ayam.jpg
+res://.godot/imported/30#Pinusan Kragilan.jpg-e9e939892080dbff7849400864173162.ctex to res://Sauce/Photos/1/30#Pinusan Kragilan.jpg
+res://.godot/imported/30#Rumah Kamera.jpg-34b16a67d2e21bd681e19fa4c688198e.ctex to res://Sauce/Photos/1/30#Rumah Kamera.jpg
+res://.godot/imported/31#Curug Bajing.jpg-8959391ba20cc1b63610a5c8d22ab15d.ctex to res://Sauce/Photos/1/31#Curug Bajing.jpg
+res://.godot/imported/31#Dino Park Soko Langit.jpg-65e2521f4c7bf3778266028965f67173.ctex to res://Sauce/Photos/1/31#Dino Park Soko Langit.jpg
+res://.godot/imported/31#Museum Batik.jpg-fa329b00dca74acb3b9ed2ece1b410ab.ctex to res://Sauce/Photos/1/31#Museum Batik.jpg
+res://.godot/imported/32#Agrowisata Salib Putih.jpg-f3f879f08e32c03552f59a38b6f78497.ctex to res://Sauce/Photos/1/32#Agrowisata Salib Putih.jpg
+res://.godot/imported/32#Kopeng Treetop Adventure Park.jpg-0c8eafa2e3cfc02fd05b338fc28dba91.ctex to res://Sauce/Photos/1/32#Kopeng Treetop Adventure Park.jpg
+res://.godot/imported/32#Saloka Theme Park.jpg-f6be3407399d6e818a336c4f28655b83.ctex to res://Sauce/Photos/1/32#Saloka Theme Park.jpg
+res://.godot/imported/33#Brown Canyon.jpg-0527d1dd23255e704b3dbea91bf0776e.ctex to res://Sauce/Photos/1/33#Brown Canyon.jpg
+res://.godot/imported/33#Kampung Pelangi.jpg-dfea046d5c2c0059e94c5b08ecb39033.ctex to res://Sauce/Photos/1/33#Kampung Pelangi.jpg
+res://.godot/imported/33#Kota Lama.jpg-a20c6350edf98e131f56793685ee98f5.ctex to res://Sauce/Photos/1/33#Kota Lama.jpg
+res://.godot/imported/33#Museum Kereta Api Ambarawa.jpg-5f01da83ff9359be2d2a433a3d4b9c5c.ctex to res://Sauce/Photos/1/33#Museum Kereta Api Ambarawa.jpg
+res://.godot/imported/34#Kampung Batik Kauman.jpg-1b7f39b3bc5a25a7a30ff4633176f529.ctex to res://Sauce/Photos/1/34#Kampung Batik Kauman.jpg
+res://.godot/imported/34#Keraton Surakarta.jpg-3becdbaf853e5bec9e9762a907806019.ctex to res://Sauce/Photos/1/34#Keraton Surakarta.jpg
+res://.godot/imported/34#Museum Tumurun.jpg-6a53422ac77dfd5ccdb7ddb7077aca92.ctex to res://Sauce/Photos/1/34#Museum Tumurun.jpg
+res://.godot/imported/34#Pandara Water World.jpg-75fce0248b095a6b840f7cf81537b0c5.ctex to res://Sauce/Photos/1/34#Pandara Water World.jpg
+res://.godot/imported/34#Pura Mangkunegaran.jpg-de331c71a62d48abe66320042fe8704b.ctex to res://Sauce/Photos/1/34#Pura Mangkunegaran.jpg
+res://.godot/imported/34#Taman Sriwedari.jpg-998891c7ac280ac4f473071563c537db.ctex to res://Sauce/Photos/1/34#Taman Sriwedari.jpg
+res://.godot/imported/35#Bukit Batu Agung.jpg-f2cba8fa47e6f327310212ba23ea9e6e.ctex to res://Sauce/Photos/1/35#Bukit Batu Agung.jpg
+res://.godot/imported/35#Jembatan Gantung Danawarih.jpg-c358c0b4787da40b5cebb876e377d44f.ctex to res://Sauce/Photos/1/35#Jembatan Gantung Danawarih.jpg
+res://.godot/imported/35#Pemandian Air Panas Guci.jpg-55c028c223d2837b8c19fe11ce511017.ctex to res://Sauce/Photos/1/35#Pemandian Air Panas Guci.jpg
+res://.godot/imported/40#Gumuk Pasir Parangkusumo.jpg-99383f886ea90abddfbc3508001d31d7.ctex to res://Sauce/Photos/1/40#Gumuk Pasir Parangkusumo.jpg
+res://.godot/imported/40#Hutan Pinus Dlingo.jpg-62a25f7526678e2bcbe84771a0677c9d.ctex to res://Sauce/Photos/1/40#Hutan Pinus Dlingo.jpg
+res://.godot/imported/40#Pantai Parangtritis.jpg-c999fbd3b064b2b43670ffce0882debc.ctex to res://Sauce/Photos/1/40#Pantai Parangtritis.jpg
+res://.godot/imported/40#Seribu Batu Songgo Langit.jpg-3a144c4d3cba056a5e9eb53116bdcc12.ctex to res://Sauce/Photos/1/40#Seribu Batu Songgo Langit.jpg
+res://.godot/imported/41#Air Terjun Luweng Sampang.jpg-73af961cbb20dda3100cd78382cead31.ctex to res://Sauce/Photos/1/41#Air Terjun Luweng Sampang.jpg
+res://.godot/imported/41#Goa Jomblang.jpg-b7a86a3bab3917050fb0fc33d9993fa6.ctex to res://Sauce/Photos/1/41#Goa Jomblang.jpg
+res://.godot/imported/41#Pantai Baron.jpg-e3bef5c2d6d48ee4e0ed3c4199819db6.ctex to res://Sauce/Photos/1/41#Pantai Baron.jpg
+res://.godot/imported/41#Pantai Timang.jpg-4fe64024fc35309fcb2b9fc4970f4ab6.ctex to res://Sauce/Photos/1/41#Pantai Timang.jpg
+res://.godot/imported/42#Goa Kiskendo.jpg-fb8b207fd8f53337ecdfc06cb1fb61f8.ctex to res://Sauce/Photos/1/42#Goa Kiskendo.jpg
+res://.godot/imported/42#Pantai Glagah.jpg-a202ead8aab69a5d8206d6dd20c325f6.ctex to res://Sauce/Photos/1/42#Pantai Glagah.jpg
+res://.godot/imported/42#Puncak Suroloyo.jpg-f70f576b75defcec647e9ebe07d0fb1b.ctex to res://Sauce/Photos/1/42#Puncak Suroloyo.jpg
+res://.godot/imported/42#Puncak Widosari.jpg-ef24e66a53b8730b8ac7d097877f6803.ctex to res://Sauce/Photos/1/42#Puncak Widosari.jpg
+res://.godot/imported/43#Candi Prambanan.jpg-7fe276acb03525f6832243102503e3b7.ctex to res://Sauce/Photos/1/43#Candi Prambanan.jpg
+res://.godot/imported/43#Candi Ratu Boko.jpg-955be087ad62f9ebda50d538e60329ce.ctex to res://Sauce/Photos/1/43#Candi Ratu Boko.jpg
+res://.godot/imported/43#Monjali.jpg-24a3c7a8ed164b670068770ad6e7e1b4.ctex to res://Sauce/Photos/1/43#Monjali.jpg
+res://.godot/imported/43#Museum Gunung Merapi.jpg-1a70c510e34c2357564d485a2d084f70.ctex to res://Sauce/Photos/1/43#Museum Gunung Merapi.jpg
+res://.godot/imported/43#Sendratari Ramayana.jpg-90298e17c825f63b1d630685c8febad7.ctex to res://Sauce/Photos/1/43#Sendratari Ramayana.jpg
+res://.godot/imported/44#Gembira Loka Zoo.jpg-e5ed6b7814e0e68d1c6232501b3d871a.ctex to res://Sauce/Photos/1/44#Gembira Loka Zoo.jpg
+res://.godot/imported/44#Malioboro.jpg-71bb5d549b65b3fcc387ac9d66cffbf6.ctex to res://Sauce/Photos/1/44#Malioboro.jpg
+res://.godot/imported/44#Pasar Beringharjo.jpg-2a28179d77380722e03475e0e73c3e36.ctex to res://Sauce/Photos/1/44#Pasar Beringharjo.jpg
+res://.godot/imported/44#Taman Pintar.jpg-96b42225cb0100df11dee1e7e7cf2603.ctex to res://Sauce/Photos/1/44#Taman Pintar.jpg
+res://.godot/imported/44#Taman Sari.jpg-250d55f0a4002452a595463a7c365ca7.ctex to res://Sauce/Photos/1/44#Taman Sari.jpg
+res://.godot/imported/44#Tugu Jogja.jpg-37e326e5a682f08028f534ee0eac3e63.ctex to res://Sauce/Photos/1/44#Tugu Jogja.jpg
+res://.godot/imported/50#Jatim Park 1.jpg-f8cf9c4b068f7cb28b2a754186431825.ctex to res://Sauce/Photos/1/50#Jatim Park 1.jpg
+res://.godot/imported/50#Jatim Park 2.jpg-e1e344a80b775dc556769d6593abd093.ctex to res://Sauce/Photos/1/50#Jatim Park 2.jpg
+res://.godot/imported/50#Jatim Park 3.jpg-0194f9c6cc5c3e545d17a008900938eb.ctex to res://Sauce/Photos/1/50#Jatim Park 3.jpg
+res://.godot/imported/50#Museum Angkut.jpg-8948e26e9872194006ef1192a809e483.ctex to res://Sauce/Photos/1/50#Museum Angkut.jpg
+res://.godot/imported/50#Museum D'Topeng Kingdom.jpg-a7e92a9ccf2b2edd1ae7e1c3c961bfde.ctex to res://Sauce/Photos/1/50#Museum D'Topeng Kingdom.jpg
+res://.godot/imported/51#Cowboy and Indian Camp.jpg-dcae0aae4016981b56036827af0b6001.ctex to res://Sauce/Photos/1/51#Cowboy and Indian Camp.jpg
+res://.godot/imported/51#Hutan Pinus Gogoniti.jpg-4b3b31471232b2d2e1d322671b02e63f.ctex to res://Sauce/Photos/1/51#Hutan Pinus Gogoniti.jpg
+res://.godot/imported/51#Istana Gebang.jpg-79a1c08e8b2935cb8eb2f65ac074fac5.ctex to res://Sauce/Photos/1/51#Istana Gebang.jpg
+res://.godot/imported/51#Kampung Afrika.jpg-3f9d67d8400ff4403e7ed8a2d7947676.ctex to res://Sauce/Photos/1/51#Kampung Afrika.jpg
+res://.godot/imported/52#Candi Tegowangi.jpg-45e9b82332dab98afdde4bfff7d7e5a0.ctex to res://Sauce/Photos/1/52#Candi Tegowangi.jpg
+res://.godot/imported/52#Goa Maria Pohsarang.jpg-b61d77eb0d6753e44d0b64775f563e6e.ctex to res://Sauce/Photos/1/52#Goa Maria Pohsarang.jpg
+res://.godot/imported/52#Gunung Kelud.jpg-b3e15a4670a1b98b9e3d53f199699895.ctex to res://Sauce/Photos/1/52#Gunung Kelud.jpg
+res://.godot/imported/52#Monumen Simpang Lima Gumul.jpg-0ca53dd1f7b0b3e46c2269ba2b2c3dc7.ctex to res://Sauce/Photos/1/52#Monumen Simpang Lima Gumul.jpg
+res://.godot/imported/53#Taman Wisata Pohon Kendil.jpg-959a864a1694dc2a5bded629832c6e8f.ctex to res://Sauce/Photos/1/53#Taman Wisata Pohon Kendil.jpg
+res://.godot/imported/53#Waduk Dawuhan.jpg-f3ef79a88a77b661b68cdbf6d151de98.ctex to res://Sauce/Photos/1/53#Waduk Dawuhan.jpg
+res://.godot/imported/53#Waduk Kedungbrubus.jpg-e73fda1327a8c90a163466c4fd395987.ctex to res://Sauce/Photos/1/53#Waduk Kedungbrubus.jpg
+res://.godot/imported/54#BINUS.jpg-283b6b44d942e207ecc7d43e358b9b6c.ctex to res://Sauce/Photos/1/54#BINUS.jpg
+res://.godot/imported/54#Kampung Warna-Warni.jpg-ebcd340f540cbc232b98ee2fc4848100.ctex to res://Sauce/Photos/1/54#Kampung Warna-Warni.jpg
+res://.godot/imported/54#Kampung Wisata Keramik Dinoyo.jpg-bf3f0c6855f8b3e9950ca7c37a568b73.ctex to res://Sauce/Photos/1/54#Kampung Wisata Keramik Dinoyo.jpg
+res://.godot/imported/54#Pulau Sempu.jpg-6486dc49796185e76a9984a45dbb2d01.ctex to res://Sauce/Photos/1/54#Pulau Sempu.jpg
+res://.godot/imported/55#Bernah de Vallei.jpg-476a744b87919e55ed666b7e59c87d1a.ctex to res://Sauce/Photos/1/55#Bernah de Vallei.jpg
+res://.godot/imported/55#Candi Bajang Ratu.jpg-58f7c3cd34339a2f58f85e72deaf17ce.ctex to res://Sauce/Photos/1/55#Candi Bajang Ratu.jpg
+res://.godot/imported/55#Candi Brahu.jpg-1326ab1b0edfe5603a79185dd1b8f7a5.ctex to res://Sauce/Photos/1/55#Candi Brahu.jpg
+res://.godot/imported/55#Candi Tikus.jpg-e1895dcb284205c65d8eed4799be5f0f.ctex to res://Sauce/Photos/1/55#Candi Tikus.jpg
+res://.godot/imported/55#Candi Wringin Lawang.jpg-c264de4d327bdf1b5e4335b2ea2fed69.ctex to res://Sauce/Photos/1/55#Candi Wringin Lawang.jpg
+res://.godot/imported/55#Patung Buddha Tidur.jpg-ac2c0b5d9943884f7e17bc95a22f1fa6.ctex to res://Sauce/Photos/1/55#Patung Buddha Tidur.jpg
+res://.godot/imported/55#Wisata Sawah Sumber Gempong.jpg-94b6b3e0ec365b4ec00e2586eea8bed1.ctex to res://Sauce/Photos/1/55#Wisata Sawah Sumber Gempong.jpg
+res://.godot/imported/56#Candi Gunung Gangsir.jpg-4ed9457aaa035f20330f92e8d837c722.ctex to res://Sauce/Photos/1/56#Candi Gunung Gangsir.jpg
+res://.godot/imported/56#Candi Jawi.jpg-ecc691f5505f7254f370be8cbe973805.ctex to res://Sauce/Photos/1/56#Candi Jawi.jpg
+res://.godot/imported/56#Kebun Raya Purwodadi.jpg-3c508830222e871c1478c08ea80050c4.ctex to res://Sauce/Photos/1/56#Kebun Raya Purwodadi.jpg
+res://.godot/imported/57#Gili Ketapang.jpg-84903c6c91e6693d723e6aabd686b7ab.ctex to res://Sauce/Photos/1/57#Gili Ketapang.jpg
+res://.godot/imported/57#Gunung Bromo.jpg-2040bb7f883fd5c4d1e073f8cc1c1b6d.ctex to res://Sauce/Photos/1/57#Gunung Bromo.jpg
+res://.godot/imported/57#Padang Rumput Savana.jpg-91c1a52518096405c57c7ef13c8cb190.ctex to res://Sauce/Photos/1/57#Padang Rumput Savana.jpg
+res://.godot/imported/58#De Mata Trick Eye Museum.jpg-921357d1027a976fc4651af235bbbda5.ctex to res://Sauce/Photos/1/58#De Mata Trick Eye Museum.jpg
+res://.godot/imported/58#Hutan Bambu Keputih.jpg-57855155566036ba4e1fdf84737d9cbf.ctex to res://Sauce/Photos/1/58#Hutan Bambu Keputih.jpg
+res://.godot/imported/58#Kembang Jepun.jpg-56b58dcdfe8e393ac8f8ef0779e8a3c6.ctex to res://Sauce/Photos/1/58#Kembang Jepun.jpg
+res://.godot/imported/58#Monumen Kapal Selam.jpg-a27e2529099cc378595ff0abb80dff3d.ctex to res://Sauce/Photos/1/58#Monumen Kapal Selam.jpg
+res://.godot/imported/58#Tugu Pahlawan.jpg-e8a68bb46a46c0e042e13bca92dbbacf.ctex to res://Sauce/Photos/1/58#Tugu Pahlawan.jpg
+res://.godot/imported/60#Bukit Kapur Arosbaya.jpg-bbe6d718155071dc6c94c8d7a684ffd4.ctex to res://Sauce/Photos/1/60#Bukit Kapur Arosbaya.jpg
+res://.godot/imported/60#Bukit Kapur Jaddih.jpg-38d6a3e227f892045e478f41d338e4f7.ctex to res://Sauce/Photos/1/60#Bukit Kapur Jaddih.jpg
+res://.godot/imported/60#Pantai Sambilangan.jpg-80cb108449741ff48082c48c2d2fc795.ctex to res://Sauce/Photos/1/60#Pantai Sambilangan.jpg
+res://.godot/imported/61#Gili Iyang.jpg-e36905f8994693c548f058e53b268f3f.ctex to res://Sauce/Photos/1/61#Gili Iyang.jpg
+res://.godot/imported/61#Pantai Lombang.jpg-6847c52fdfb0271b871be9dca3bcf861.ctex to res://Sauce/Photos/1/61#Pantai Lombang.jpg
+res://.godot/imported/61#Pantai Sembilan.jpg-6259a623023e0bc5180de3be35f6c8f4.ctex to res://Sauce/Photos/1/61#Pantai Sembilan.jpg
+res://.godot/imported/62#Pantai Ujung Negoro.jpg-634ca27d14feb5c466058f832543e1db.ctex to res://Sauce/Photos/1/62#Pantai Ujung Negoro.jpg
+res://.godot/imported/buffer.jpg-cbf0c8397ba7940a5416167885a2e7e2.ctex to res://Sauce/Photos/buffer.jpg
+------
+
+The following files were converted and saved to a non-original path, but did not have their import data rewritten.
+These files will not be re-imported when loading the project.
+res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex to res://.assets/icon.png
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.1.2 to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+

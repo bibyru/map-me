@@ -1,12 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwont0t4texl1"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://Scripts/options.gd" id="1_i0jtu"]
-[ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_l7pe8"]
-[ext_resource type="PackedScene" uid="uid://c4rmp84rxn8fy" path="res://Prefabs/checkbutton.tscn" id="3_481o8"]
+[ext_resource type="Script" path="res://Scripts/options.gd" id="1"]
+[ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="2"]
+[ext_resource type="PackedScene" uid="uid://c4rmp84rxn8fy" path="res://Prefabs/checkbutton.tscn" id="3"]
 
 [node name="Options" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_i0jtu")
+script = ExtResource("1")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
@@ -18,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_l7pe8")
+theme = ExtResource("2")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -88,7 +88,7 @@ text = "Fullscreen"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="FullCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen" instance=ExtResource("3_481o8")]
+[node name="FullCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen" instance=ExtResource("3")]
 layout_mode = 2
 
 [node name="Borderless" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Settings"]
@@ -103,7 +103,7 @@ text = "Borderless"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BorderCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless" instance=ExtResource("3_481o8")]
+[node name="BorderCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless" instance=ExtResource("3")]
 layout_mode = 2
 
 [node name="Master" type="VBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel/Settings"]
@@ -164,7 +164,7 @@ text = "Hide destination name"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HideNameCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Game/HideName" instance=ExtResource("3_481o8")]
+[node name="HideNameCheckbutton" parent="CanvasLayer/Control/MarginContainer/Panel/Game/HideName" instance=ExtResource("3")]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/MarginContainer/Panel"]
@@ -201,13 +201,13 @@ size_flags_horizontal = 3
 layout_mode = 2
 text = "Quit"
 
-[connection signal="tab_changed" from="CanvasLayer/Control/MarginContainer/Panel/TabBar" to="." method="_on_tab_bar_tab_changed"]
-[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen/FullCheckbutton" to="." method="_on_full_checkbutton_toggled"]
-[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless/BorderCheckbutton" to="." method="_on_border_checkbutton_toggled"]
-[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Master/MasterHSlider" to="." method="_on_master_h_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Sound/SoundHSlider" to="." method="_on_sound_h_slider_value_changed"]
-[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Music/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
-[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Game/HideName/HideNameCheckbutton" to="." method="_on_hide_name_checkbutton_toggled"]
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Title" to="." method="_on_title_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="tab_changed" from="CanvasLayer/Control/MarginContainer/Panel/TabBar" to="." method="_on_tab_bar_tab_changed" flags=18]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Fullscreen/FullCheckbutton" to="." method="_on_full_checkbutton_toggled" flags=18]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Borderless/BorderCheckbutton" to="." method="_on_border_checkbutton_toggled" flags=18]
+[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Master/MasterHSlider" to="." method="_on_master_h_slider_value_changed" flags=18]
+[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Sound/SoundHSlider" to="." method="_on_sound_h_slider_value_changed" flags=18]
+[connection signal="value_changed" from="CanvasLayer/Control/MarginContainer/Panel/Settings/Music/MusicHSlider" to="." method="_on_music_h_slider_value_changed" flags=18]
+[connection signal="toggled" from="CanvasLayer/Control/MarginContainer/Panel/Game/HideName/HideNameCheckbutton" to="." method="_on_hide_name_checkbutton_toggled" flags=18]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Close" to="." method="_on_close_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Title" to="." method="_on_title_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/Control/MarginContainer/Panel/HBoxContainer/Quit" to="." method="_on_quit_pressed" flags=18]

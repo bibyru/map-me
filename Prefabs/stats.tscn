@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxfsem31j8wbt"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_xssmd"]
-[ext_resource type="Script" path="res://Scripts/stats.gd" id="2_ae4hs"]
+[ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1"]
+[ext_resource type="Script" path="res://Scripts/stats.gd" id="2"]
 
 [node name="Stats" type="Control"]
 layout_mode = 3
@@ -10,8 +10,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_xssmd")
-script = ExtResource("2_ae4hs")
+theme = ExtResource("1")
+script = ExtResource("2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -40,4 +40,4 @@ text = "Cheat"
 [node name="PlayTimer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="timeout" from="PlayTimer" to="." method="_on_play_timer_timeout"]
+[connection signal="timeout" from="PlayTimer" to="." method="_on_play_timer_timeout" flags=18]

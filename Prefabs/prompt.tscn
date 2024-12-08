@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs45is6ryhear"]
+[gd_scene load_steps=7 format=3]
 
-[ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1_6owuu"]
-[ext_resource type="Script" path="res://Scripts/prompt.gd" id="2_gyqke"]
-[ext_resource type="Texture2D" uid="uid://dvrsif5iuuv03" path="res://Sauce/Photos/buffer.jpg" id="3_ayk78"]
-[ext_resource type="Texture2D" uid="uid://78hdk2l7rjk4" path="res://Sauce/Sprites/scratch.png" id="3_laqur"]
-[ext_resource type="AudioStream" uid="uid://b0hffc4hut7jo" path="res://Sauce/Sounds/ans_correct.mp3" id="5_jhb13"]
-[ext_resource type="AudioStream" uid="uid://dn7ju2woevxp0" path="res://Sauce/Sounds/ans_wrong.mp3" id="6_bfvor"]
+[ext_resource type="Theme" uid="uid://4238oj53p822" path="res://Sauce/Theme/maptheme.tres" id="1"]
+[ext_resource type="Script" path="res://Scripts/prompt.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dvrsif5iuuv03" path="res://Sauce/Photos/buffer.jpg" id="3"]
+[ext_resource type="Texture2D" uid="uid://78hdk2l7rjk4" path="res://Sauce/Sprites/scratch.png" id="4"]
+[ext_resource type="AudioStream" uid="uid://b0hffc4hut7jo" path="res://Sauce/Sounds/ans_correct.mp3" id="5"]
+[ext_resource type="AudioStream" uid="uid://dn7ju2woevxp0" path="res://Sauce/Sounds/ans_wrong.mp3" id="6"]
 
 [node name="Prompt" type="Control"]
 layout_mode = 3
@@ -18,8 +18,8 @@ offset_top = -149.0
 offset_bottom = -149.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_6owuu")
-script = ExtResource("2_gyqke")
+theme = ExtResource("1")
+script = ExtResource("2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -112,28 +112,28 @@ vertical_alignment = 1
 
 [node name="Picture" type="Sprite2D" parent="."]
 position = Vector2(0, -51)
-texture = ExtResource("3_ayk78")
+texture = ExtResource("3")
 
 [node name="Scratch" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0.00012207, 72)
-scale = Vector2(0.348826, 0.185652)
-texture = ExtResource("3_laqur")
+position = Vector2(0.0001220699996338226, 72)
+scale = Vector2(0.348825991153717, 0.1856520026922226)
+texture = ExtResource("4")
 
 [node name="Sounds" type="Node2D" parent="."]
 
 [node name="Correct" type="AudioStreamPlayer" parent="Sounds"]
 process_mode = 3
-stream = ExtResource("5_jhb13")
+stream = ExtResource("5")
 bus = &"Sound"
 
 [node name="Wrong" type="AudioStreamPlayer" parent="Sounds"]
 process_mode = 3
-stream = ExtResource("6_bfvor")
+stream = ExtResource("6")
 bus = &"Sound"
 
 [node name="AnsColorTimer" type="Timer" parent="."]
 wait_time = 0.3
 one_shot = true
 
-[connection signal="timeout" from="AnsColorTimer" to="." method="_on_ans_color_timer_timeout"]
+[connection signal="timeout" from="AnsColorTimer" to="." method="_on_ans_color_timer_timeout" flags=18]
